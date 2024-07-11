@@ -49,7 +49,6 @@
 // it calls the OnFinish callback.
 //
 // For a full ping example, see "cmd/ping/ping.go".
-//
 package ping
 
 import (
@@ -309,6 +308,11 @@ func (p *Pinger) SetIPAddr(ipaddr *net.IPAddr) {
 
 	p.ipaddr = ipaddr
 	p.addr = ipaddr.String()
+}
+
+// SetSource sets the ip address of the source.
+func (p *Pinger) SetSource(source string) {
+	p.Source = source
 }
 
 // IPAddr returns the ip address of the target host.
